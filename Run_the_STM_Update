@@ -1,0 +1,2 @@
+App to run to update licenses
+while read -r VM_UUID CN_UUID LICENSE_PATH LICENSE; do echo $VM_UUID $CN_UUID $LICENSE_PATH $LICENSE.txt; sdc-oneachnode  --n $CN_UUID -X -g /home/admin/$LICENSE.txt -d $LICENSE_PATH ;  done < test.license.update

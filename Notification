@@ -1,0 +1,2 @@
+Notification list
+while read -r VM_UUID ALIAS CN_UUID other_thing state; do ./cn-user-list.rb west-1 $CN_UUID|grep $VM_UUID ;  done < west-1.stingray.vms
