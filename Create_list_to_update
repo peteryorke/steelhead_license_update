@@ -1,2 +1,7 @@
 List to run update
 while read -r VM_UUID CN_UUID other_thing state; do echo -n "$VM_UUID $CN_UUID "; sdc-oneachnode  -j -n $CN_UUID "ls /zones/$VM_UUID/root/opt/local/steelapp/zxtm/conf/licensekeys/"|json -Ha "result".stdout | paste;  done < west-1.stingray.vms
+
+You will need to gather from the following directoty trees
+/zones/$VM_UUID/root/opt/local/steelapp/zxtm/conf/licensekeys/
+/zones/$VM_UUID/root/opt/local/stingray/zxtm/conf/licensekeys/
+/zones/$VM_UUID/root/opt/local/zeus/zxtm/conf/licensekeys/
